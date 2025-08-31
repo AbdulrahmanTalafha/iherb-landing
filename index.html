@@ -25,120 +25,8 @@
             color: #333;
         }
         
-        .main-wrapper {
-            display: flex;
-            max-width: 1200px;
-            width: 100%;
-            gap: 20px;
-        }
-        
-        /* العمود الأيسر للصور المتحركة */
-        .products-column {
-            flex: 0 0 280px;
-            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-            border-radius: 20px;
-            padding: 20px;
-            color: white;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-            max-height: 90vh;
-            overflow-y: auto;
-            position: sticky;
-            top: 20px;
-        }
-        
-        .products-column h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            text-align: center;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .product-item {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 12px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: float 3s ease-in-out infinite;
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-        }
-        
-        .product-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .product-item:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-        
-        .product-item:nth-child(3) {
-            animation-delay: 1s;
-        }
-        
-        .product-item:nth-child(4) {
-            animation-delay: 1.5s;
-        }
-        
-        .product-item:nth-child(5) {
-            animation-delay: 2s;
-        }
-        
-        .product-image {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            margin: 0 auto 12px;
-            border-radius: 10px;
-            background: white;
-            padding: 8px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .product-name {
-            font-size: 14px;
-            color: #333;
-            font-weight: 600;
-            margin-bottom: 8px;
-            height: 40px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-        
-        .product-price {
-            font-size: 16px;
-            color: #e67e22;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .product-button {
-            display: block;
-            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .product-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* العمود الأيمن للمحتوى الرئيسي */
-        .content-column {
-            flex: 1;
-        }
-        
         .container {
+            max-width: 800px;
             width: 100%;
             background: white;
             border-radius: 20px;
@@ -514,23 +402,6 @@
             font-size: 16px;
         }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @media (max-width: 992px) {
-            .main-wrapper {
-                flex-direction: column;
-            }
-            
-            .products-column {
-                flex: 0 0 auto;
-                max-height: none;
-                position: static;
-            }
-        }
-        
         @media (max-width: 768px) {
             .features {
                 flex-direction: column;
@@ -555,201 +426,156 @@
     </style>
 </head>
 <body>
-    <div class="main-wrapper">
-        <!-- العمود الأيسر للصور المتحركة -->
-        <div class="products-column">
-            <h2>🛍️ الأكثر طلباً من آي هيرب</h2>
-            
-            <div class="product-item">
-                <img src="https://i.ibb.co/0Q7J0q0/vitamin-d3.jpg" class="product-image" alt="فيتامين D3">
-                <div class="product-name">فيتامين D3 5000 IU - Now Foods</div>
-                <div class="product-price">22.50 د.أ</div>
-                <a href="https://wa.me/962798807173?text=أريد%20طلب%20فيتامين%20D3%205000%20IU" class="product-button">اطلب الآن</a>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-whatsapp"></i>
             </div>
-            
-            <div class="product-item">
-                <img src="https://i.ibb.co/6n7B5C3/jojoba-oil.jpg" class="product-image" alt="زيت الجوجوبا">
-                <div class="product-name">زيت الجوجوبا النقي - Cliganic</div>
-                <div class="product-price">18.75 د.أ</div>
-                <a href="https://wa.me/962798807173?text=أريد%20طلب%20زيت%20الجوجوبا%20النقي" class="product-button">اطلب الآن</a>
-            </div>
-            
-            <div class="product-item">
-                <img src="https://i.ibb.co/0j7s2y0/collagen.jpg" class="product-image" alt="كولاجين">
-                <div class="product-name">مسحوق الكولاجين - NeoCell</div>
-                <div class="product-price">35.00 د.أ</div>
-                <a href="https://wa.me/962798807173?text=أريد%20طلب%20مسحوق%20الكولاجين" class="product-button">اطلب الآن</a>
-            </div>
-            
-            <div class="product-item">
-                <img src="https://i.ibb.co/6RJf4z0/omega3.jpg" class="product-image" alt="أوميغا-3">
-                <div class="product-name">أوميغا-3 - Nordic Naturals</div>
-                <div class="product-price">27.90 د.أ</div>
-                <a href="https://wa.me/962798807173?text=أريد%20طلب%20أوميغا-3" class="product-button">اطلب الآن</a>
-            </div>
-            
-            <div class="product-item">
-                <img src="https://i.ibb.co/9q8W4V0/shampoo.jpg" class="product-image" alt="شامبو">
-                <div class="product-name">شامبو Jason Natural</div>
-                <div class="product-price">15.25 د.أ</div>
-                <a href="https://wa.me/962798807173?text=أريد%20طلب%20شامبو%20Jason" class="product-button">اطلب الآن</a>
-            </div>
-        </div>
+            <h1>وسيط شراء من <span>آي هيرب</span></h1>
+            <p>لطلب أي منتج ترغب به من متجر آي هيرب العالمي</p>
+            <div class="mediator-name">نادين عبيدات</div>
+        </header>
         
-        <!-- العمود الأيمن للمحتوى الرئيسي -->
-        <div class="content-column">
-            <div class="container">
-                <header>
-                    <div class="logo">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h1>وسيط شراء من <span>آي هيرب</span></h1>
-                    <p>لطلب أي منتج ترغب به من متجر آي هيرب العالمي</p>
-                    <div class="mediator-name">نادين عبيدات</div>
-                </header>
+        <div class="ad-content">
+            <p class="service-desc">
+                هل ترغب بمنتجات آي هيرب ولكن تحتاج للمساعدة في الطلب؟ 
+                <br>أنا وسيطتك المختصة لمساعدتك في طلب أي منتج ترغب به من آي هيرب!
+            </p>
+            
+            <!-- قسم منتجات آي هيرب الأردن -->
+            <div class="iherb-products">
+                <h2><i class="fas fa-shopping-bag"></i> عرض منتجات آي هيرب الأردن</h2>
+                <p>تصفح أفضل المنتجات من آي هيرب المتوفرة للتوصيل إلى الأردن</p>
                 
-                <div class="ad-content">
-                    <p class="service-desc">
-                        هل ترغب بمنتجات آي هيرب ولكن تحتاج للمساعدة في الطلب؟ 
-                        <br>أنا وسيطتك المختصة لمساعدتك في طلب أي منتج ترغب به من آي هيرب!
-                    </p>
-                    
-                    <!-- قسم منتجات آي هيرب الأردن -->
-                    <div class="iherb-products">
-                        <h2><i class="fas fa-shopping-bag"></i> عرض منتجات آي هيرب الأردن</h2>
-                        <p>تصفح أفضل المنتجات من آي هيرب المتوفرة للتوصيل إلى الأردن</p>
-                        
-                        <div class="product-categories">
-                            <div class="product-category" onclick="openCategory('vitamins')">
-                                <i class="fas fa-capsules"></i>
-                                <h3>الفيتامينات والمكملات</h3>
-                            </div>
-                            <div class="product-category" onclick="openCategory('beauty')">
-                                <i class="fas fa-spa"></i>
-                                <h3>العناية بالبشرة</h3>
-                            </div>
-                            <div class="product-category" onclick="openCategory('nutrition')">
-                                <i class="fas fa-apple-alt"></i>
-                                <h3>التغذية والرياضة</h3>
-                            </div>
-                            <div class="product-category" onclick="openCategory('hair')">
-                                <i class="fas fa-pump-soap"></i>
-                                <h3>العناية بالشعر</h3>
-                            </div>
-                        </div>
-                        
-                        <a href="https://jo.iherb.com/" class="browse-button" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> تصفح كل المنتجات
-                        </a>
+                <div class="product-categories">
+                    <div class="product-category" onclick="openCategory('vitamins')">
+                        <i class="fas fa-capsules"></i>
+                        <h3>الفيتامينات والمكملات</h3>
                     </div>
-                    
-                    <div class="features">
-                        <div class="feature whatsapp" onclick="openWhatsApp('أريد طلب منتج من iHerb')">
-                            <i class="fas fa-shopping-cart"></i>
-                            <h3>اطلب بسهولة</h3>
-                            <p>أرسل الرابط أو الصورة عبر الواتساب</p>
-                        </div>
-                        
-                        <div class="feature">
-                            <i class="fas fa-truck"></i>
-                            <h3>توصيل سريع</h3>
-                            <p>التوصيل داخل مدينة اربد: 1 دينار<br>
-                            قرى اربد: 2 دينار</p>
-                        </div>
-                        
-                        <div class="feature whatsapp" onclick="openWhatsApp('أريد الاستفسار عن منتج من iHerb')">
-                            <i class="fas fa-headset"></i>
-                            <h3>دعم متواصل</h3>
-                            <p>متاحة للاستفسارات عبر الواتساب</p>
-                        </div>
-                        
-                        <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <h3>طلبك آمن</h3>
-                            <p>الدفع عند الاستلام للطلبات أقل من 10 دينار<br>
-                            للطلبات أكثر من 10 دينار: دفع 20% كبدل جدية</p>
-                        </div>
+                    <div class="product-category" onclick="openCategory('beauty')">
+                        <i class="fas fa-spa"></i>
+                        <h3>العناية بالبشرة</h3>
                     </div>
-                    
-                    <div class="contact-box">
-                        <h2>كيفية الطلب</h2>
-                        <p>أرسل رابط المنتج أو صورته عبر الواتساب إلى الرقم:</p>
-                        <p style="font-size: 22px; font-weight: bold; margin: 10px 0;">0798807173</p>
-                        <p>سأزودك بالسعر النهائي وتفاصيل الشحن</p>
-                        
-                        <a href="https://wa.me/962798807173?text=أريد طلب منتج من iHerb" class="whatsapp-button">
-                            <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
-                        </a>
+                    <div class="product-category" onclick="openCategory('nutrition')">
+                        <i class="fas fa-apple-alt"></i>
+                        <h3>التغذية والرياضة</h3>
                     </div>
-                    
-                    <div class="payment-info">
-                        <h3>شروط الدفع والطلب:</h3>
-                        <ul>
-                            <li>الدفع عند الاستلام للطلبات التي تقل عن 10 دينار</li>
-                            <li>للطلبات التي تزيد عن 10 دينار، يطلب دفع 20% من المبلغ كبدل جدية للطلب</li>
-                            <li>أسعار التوصيل: داخل اربد (1 دينار)، قرى اربد (2 دينار)</li>
-                            <li>يتم تأكيد الطلب خلال 24 ساعة</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- قسم التقييمات -->
-                    <div class="ratings-section">
-                        <h2>تقيم الخدمة</h2>
-                        <form class="rating-form" id="ratingForm">
-                            <div class="form-group">
-                                <label for="name">اسمك</label>
-                                <input type="text" id="name" placeholder="ادخل اسمك" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>تقييمك</label>
-                                <div class="stars" id="stars">
-                                    <span class="star" data-value="1">★</span>
-                                    <span class="star" data-value="2">★</span>
-                                    <span class="star" data-value="3">★</span>
-                                    <span class="star" data-value="4">★</span>
-                                    <span class="star" data-value="5">★</span>
-                                </div>
-                                <input type="hidden" id="rating" name="rating" value="0" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="comment">تعليقك (اختياري)</label>
-                                <textarea id="comment" placeholder="اكتب تعليقك عن الخدمة هنا"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">إرسال التقييم</button>
-                        </form>
-                        
-                        <div class="previous-ratings">
-                            <h3>التقييمات السابقة</h3>
-                            <div id="ratingsContainer">
-                                <div class="rating-item">
-                                    <div class="rating-header">
-                                        <span class="rating-name">سارة أحمد</span>
-                                        <span class="rating-stars">★★★★★</span>
-                                    </div>
-                                    <p class="rating-comment">خدمة رائعة وتوصيل سريع، شكراً جزيلاً نادين</p>
-                                </div>
-                                
-                                <div class="rating-item">
-                                    <div class="rating-header">
-                                        <span class="rating-name">محمد خالد</span>
-                                        <span class="rating-stars">★★★★☆</span>
-                                    </div>
-                                    <p class="rating-comment">المنتج وصل بجودة عالية والتوصيل كان في الوقت المحدد</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="product-category" onclick="openCategory('hair')">
+                        <i class="fas fa-pump-soap"></i>
+                        <h3>العناية بالشعر</h3>
                     </div>
                 </div>
                 
-                <footer>
-                    <p>لطلب أي منتج من آي هيرب، لا تتردد في التواصل مع نادين عبيدات</p>
-                    <p>وسيط آي هيرب &copy; 2023</p>
-                </footer>
+                <a href="https://jo.iherb.com/" class="browse-button" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> تصفح كل المنتجات
+                </a>
+            </div>
+            
+            <div class="features">
+                <div class="feature whatsapp" onclick="openWhatsApp('أريد طلب منتج من iHerb')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>اطلب بسهولة</h3>
+                    <p>أرسل الرابط أو الصورة عبر الواتساب</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <h3>توصيل سريع</h3>
+                    <p>التوصيل داخل مدينة اربد: 1 دينار<br>
+                    قرى اربد: 2 دينار</p>
+                </div>
+                
+                <div class="feature whatsapp" onclick="openWhatsApp('أريد الاستفسار عن منتج من iHerb')">
+                    <i class="fas fa-headset"></i>
+                    <h3>دعم متواصل</h3>
+                    <p>متاحة للاستفسارات عبر الواتساب</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>طلبك آمن</h3>
+                    <p>الدفع عند الاستلام للطلبات أقل من 10 دينار<br>
+                    للطلبات أكثر من 10 دينار: دفع 20% كبدل جدية</p>
+                </div>
+            </div>
+            
+            <div class="contact-box">
+                <h2>كيفية الطلب</h2>
+                <p>أرسل رابط المنتج أو صورته عبر الواتساب إلى الرقم:</p>
+                <p style="font-size: 22px; font-weight: bold; margin: 10px 0;">0798807173</p>
+                <p>سأزودك بالسعر النهائي وتفاصيل الشحن</p>
+                
+                <a href="https://wa.me/962798807173?text=أريد طلب منتج من iHerb" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
+                </a>
+            </div>
+            
+            <div class="payment-info">
+                <h3>شروط الدفع والطلب:</h3>
+                <ul>
+                    <li>الدفع عند الاستلام للطلبات التي تقل عن 10 دينار</li>
+                    <li>للطلبات التي تزيد عن 10 دينار، يطلب دفع 20% من المبلغ كبدل جدية للطلب</li>
+                    <li>أسعار التوصيل: داخل اربد (1 دينار)، قرى اربد (2 دينار)</li>
+                    <li>يتم تأكيد الطلب خلال 24 ساعة</li>
+                </ul>
+            </div>
+            
+            <!-- قسم التقييمات -->
+            <div class="ratings-section">
+                <h2>تقيم الخدمة</h2>
+                <form class="rating-form" id="ratingForm">
+                    <div class="form-group">
+                        <label for="name">اسمك</label>
+                        <input type="text" id="name" placeholder="ادخل اسمك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>تقييمك</label>
+                        <div class="stars" id="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comment">تعليقك (اختياري)</label>
+                        <textarea id="comment" placeholder="اكتب تعليقك عن الخدمة هنا"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">إرسال التقييم</button>
+                </form>
+                
+                <div class="previous-ratings">
+                    <h3>التقييمات السابقة</h3>
+                    <div id="ratingsContainer">
+                        <div class="rating-item">
+                            <div class="rating-header">
+                                <span class="rating-name">سارة أحمد</span>
+                                <span class="rating-stars">★★★★★</span>
+                            </div>
+                            <p class="rating-comment">خدمة رائعة وتوصيل سريع، شكراً جزيلاً نادين</p>
+                        </div>
+                        
+                        <div class="rating-item">
+                            <div class="rating-header">
+                                <span class="rating-name">محمد خالد</span>
+                                <span class="rating-stars">★★★★☆</span>
+                            </div>
+                            <p class="rating-comment">المنتج وصل بجودة عالية والتوصيل كان في الوقت المحدد</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        
+        <footer>
+            <p>لطلب أي منتج من آي هيرب، لا تتردد في التواصل مع نادين عبيدات</p>
+            <p>وسيط آي هيرب &copy; 2023</p>
+        </footer>
     </div>
 
     <script>
